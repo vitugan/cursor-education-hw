@@ -46,7 +46,8 @@
                 
                 <article class="hw-task">
                     <header class="alert alert alert-secondary">
-                        <b>1) Set up Git (and configure) on your local machine.</b> <br>
+                        <h3>Task 1</h3>
+                        <b>Set up Git (and configure) on your local machine.</b> <br>
                         <b>send us: screenshot of console.</b></p>
                     </header>
                     <div class="article_content">
@@ -56,10 +57,139 @@
 
                 <article class="hw-task">
                     <header class="alert alert alert-secondary">
-                        <b>Task 2. Github profile review.</b>
+                        <h3>Task 2</h3>
+                        <b>Github profile review.</b>
                     </header>
                     <div class="article_content">
-                        <a href="https://github.com/vitugan/">Git-hub profile link</a>
+                        <a href="https://github.com/vitugan/" target="_blank">Git-hub profile link</a>
+                        <p>I set up needed info to account, real photo, and email. </p>
+                        <p>Next I need to do is delete all test repo's</p>
+                    </div>
+                </article>
+
+                <article class="hw-task">
+                    <header class="alert alert alert-secondary">
+                        <h3>Task 3</h3>
+                        <b>Create & configure first repository from console. Push few files.</b><br>
+                        <b>send us: console’s screenshots (with init, add, commit, push commands).</b>
+                    </header>
+                    <div class="article_content">
+                        <figure>
+                            <img class="img-responsive" src="img/01_03_01_task_Screenshot.jpg">
+                            <figcaption>
+                                <p>Create repo</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="img-responsive" src="img/01_03_02_task_Screenshot.jpg">
+                            <figcaption>
+                                <p>Save repo</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="img-responsive" src="img/01_03_03_task_Screenshot.jpg">
+                            <figcaption>
+                                <p>Add remote repo</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="hw-task">
+                    <header class="alert alert alert-secondary">
+                        <h3>Task 4</h3>
+                        <b>Create & configure first repository from Github. Push few files.</b><br>
+                        <b>send us: browser’s screenshots (with creating, adding file, saving actions).</b>
+                    </header>
+                    <div class="article_content">
+                        <figure>
+                            <img class="img-responsive" src="img/01_03_04_task_Screenshot.jpg">
+                            <figcaption>
+                                <p>View after <code>push</code> </p>
+                            </figcaption>
+                            <b>I pushed this site to the repo from Task 3</b>
+                        </figure>
+                    </div>
+                </article>
+
+
+                <article class="hw-task">
+                    <header class="alert alert alert-secondary">
+                        <h3>Task 5</h3>
+                        <b>Make Fork & PR of repository from anyone else from group.<br/>send us: link to PR.</b>
+                    </header>
+                    <div class="article_content">
+                        <p>Link to <a href="https://github.com/Ostin333/CURSOR-test/pull/1" target="_blank">pull request.</a></p>
+                    </div>
+                </article>
+
+                <article class="hw-task">
+                    <header class="alert alert alert-secondary">
+                        <h3>Task 6</h3>
+                        <b>Create Github Pages from any of your repository (or create new repository).<br>send us: link to file stored on Github Pages (not repo!).</b>
+                    </header>
+                    <div class="article_content">
+                        <p>Link to <a href="https://github.com/Ostin333/CURSOR-test/pull/1" target="_blank">pull request.</a></p>
+                    </div>
+                </article>
+
+                <article class="hw-task">
+                    <header class="alert alert alert-secondary">
+                        <h3>Task 7</h3>
+                        <b>Play https://try.github.io/.</br>send us: your personal notes during playing this game (can be photos from paper notebook).</b>
+                    </header>
+                    <div class="article_content">
+                        <p>1. Checking the Status</p>
+                        <code>$ git status</code>
+                        <p>2. adding changes</p>
+                        <code>$ git add . //all changes</code>  
+                        <code>$ git add file.txt //add file</code>  
+                        <code>$ git add '*.txt' //batch add by mask</code>  
+                        <p>3. Fix changes (Commiting)</p>
+                        <code>$ git commit -m "Add cute octocat story"</code>
+                        <p>4. Check history</p>
+                        <code>$ git log </code>
+                        <p>5. Add remote repository</p>
+                        <code>$ git remote add origin https://github.com/try-git/try_git.git</code>
+                        <p>6. Push changes to remote repository</p>
+                        <code>$ git push -u origin master</code>
+                        <p>7. Pull remote repository</p>
+                        <code>git pull origin master</code>
+                        <p>8. Check the diffrences from last commit</p>
+                        <code>$ git diff HEAD</code>
+                        <p>9. Check the diffrence after pull.</p>
+                        <code>$ git diff --staged</code>
+                        <p>10. Reset the staged file (octodog.txt)</p>
+                        <code>$ git reset octofamily/octodog.txt</code>                        
+                        <p>11. Then files can be changed back to how they were at the last commit by using the command</p>
+                        <code>git checkout -- target_file </code>
+                        <p>12. Create branch</p>
+                        <code>$ git branch new_feature</code>
+                        <p>13. To see local branches</p>
+                        <code>$ git branch</code>
+                        <p>14. Switch between branches</p>
+                        <code>$ git checkout &lsaquo;branch&rsaquo;</code>
+                        <p>15 <b>git rm</b> command which will not only remove the actual files from disk, but will also stage the removal of the files for us.</p>
+                        <code>$ git rm '*.txt'</code>
+                        <p>16. To merge <b>master</b> branche with <b>feature_branch</b>: </p>
+                        <code>$ git merge &lsaquo;feature_branch&rsaquo;</code>
+                        <p>17. After merge branches we can delete &lsaquo;feature_branch&rsaquo;:</p>
+                        <code>$ git branch -d &lsaquo;feature_branch&rsaquo;</code>
+                    </div>
+                </article>
+                <article>
+                    
+                <article class="hw-task">
+                    <header class="alert alert alert-secondary">
+                        <h3>Task 8</h3>
+                        <p>Fork, push changes for Fork, and Create PR for <a href="https://github.com/cursor-education/welcome-to-github" target="_blank">github.com/cursor-education/welcome-to-github</a>.</p>
+                    </header>
+                    <div class="article_content">
+                        <p>send us: link to PR. (you should ask Roman privately to add you to “cursor-education” repo).</p>
+                        <p>send us: find a way to update forked repo from original.</p>
+                        <code>//List the current configured remote repository for your fork.<br>$ git remote -v</code>
+                        <code>$ git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git</code>
+                        <code>$git fetch upstream</code>
                     </div>
                 </article>
 

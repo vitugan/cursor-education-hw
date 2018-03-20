@@ -122,10 +122,27 @@ body {
   }
 }
 
+.img-responsive {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+}
 
 .hw-task {
   margin-top: 20px;
   margin-bottom: 30px;
   background-color: #fff;
   padding: 20px;
+}
+
+figcaption {
+  font-weight: bold;
+}
+
+.article_content p {
+  margin-bottom: 5px;
+}
+code {
+  margin-bottom: 20px;
+  display: inline-block;
 }
