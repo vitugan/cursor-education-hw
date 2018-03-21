@@ -45,7 +45,7 @@ gulp.task('html:build', function(){
 		.pipe(reload({stream: true}));
 });
 
-gulp.task('css:build', function(){
+gulp.task('style:build', function(){
 	gulp.src(path.src.css)
 		.pipe(gulp.dest(path.build.css))
     	.pipe(reload({stream: true}));
@@ -56,3 +56,34 @@ gulp.task('img:build', function(){
 		.pipe(gulp.dest(path.build.img))
     	.pipe(reload({stream: true}));
 });
+
+
+gulp.task('build', [
+    'html:build',   
+    'style:build',
+    'img:build'
+]);
+
+gulp.task('watch', function(){
+    watch([path.watch.html], function(event, cb) {
+        gulp.start('html:build');
+    });
+    watch([path.watch.style], function(event, cb) {
+        gulp.start('style:build');
+    });
+    watch([path.watch.img], function(event, cb) {
+        gulp.start('img:build');
+    });
+});
+
+
+gulp.task('webserver', function () {
+    browserSync(config);
+});
+
+
+gulp.task('clean', function (cb) {
+    rimraf(path.clean, cb);
+});
+
+gulp.task('default', ['build', 'webserver', 'watch']);
