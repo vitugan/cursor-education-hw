@@ -9,9 +9,9 @@ var gulp = require('gulp'),
 
 var path = {
 	build: {
-		html: 	'build/',
-		css: 	'build/css',
-		img: 	'build/img',		
+		html: 	'./',
+		css: 	'./css',
+		img: 	'./img',		
 	},
 	src: {
 		html: 	'src/*.html',
@@ -24,12 +24,12 @@ var path = {
 		style: 'src/*.css',
 		img: 'src/img/**/*.*'
 	},
-	clean: './build/'
+	clean: './'
 };
 
 var config = {
 	server: {
-		baseDir: "./build/"
+		baseDir: "./"
 	},
 	tunnel: true,
 	host: 'localhost',
