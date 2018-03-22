@@ -8,6 +8,12 @@
     <!-- Menu Toggle Script -->
     <script>
     $("#menu-toggle").click(function(e) {
+        console.log($(this).text());
+        if($(this).text() === 'Hide sidebar'){
+            $(this).html("Show sidebar");
+        } else {
+            $(this).html("Hide sidebar");
+        }
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
