@@ -16,12 +16,11 @@ var path = {
 	src: {
 		html: 	'src/*.html',
 		css: 	'src/css/*.css',
-		img: 	'src/img/*.*',		
-
+		img: 	'src/img/**/*.*',
 	}, 
 	watch: {
 		html: 'src/**/*.html',
-		style: 'src/*.css',
+		style: 'src/css/*.css',
 		img: 'src/img/**/*.*'
 	},
 	clean: './'
