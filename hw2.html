@@ -37,6 +37,10 @@
                         <li>
                             <a href="hw2.html">HW2 - Network </a>
                         </li>
+                        <li>
+                            <a href="hw3/index.html">HW3 - HTML </a>
+                        </li>
+        
                     </ul>
                 </div>
                 <!-- /#sidebar-wrapper -->
@@ -57,8 +61,12 @@
                         <b><a href="https://developers.google.com/web/tools/chrome-devtools/network-performance/resource-loading" target="_blank">https://developers.google.com/web/tools/chrome-devtools/network-performance/resource-loading</a></b>
                     </header>
                     <div class="article_content">                        
-                        <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload" target="_blank"><code>DOMContentLoaded</code></a> event is fired when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading</p>
-                        <p>The <code>onload</code> property of the <code>GlobalEventHandlers</code> mixin is an event handler for the <code>load</code> event of a <code>Window</code>, <code>XMLHttpRequest</code>, <code>&lt;img&gt;</code> element, etc., which fires when the resource has loaded.</p>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload" target="_blank"><code>DOMContentLoaded</code></a> event is fired when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading</p>
+                                <p>The <code>onload</code> property of the <code>GlobalEventHandlers</code> mixin is an event handler for the <code>load</code> event of a <code>Window</code>, <code>XMLHttpRequest</code>, <code>&lt;img&gt;</code> element, etc., which fires when the resource has loaded.</p>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
@@ -139,15 +147,19 @@
                         </ol>
                     </header>
                     <div class="article_content">
-                        <p>1. List of differences be</p>
-                        <ul>
-                            <li>HTTP 1.0 can define 16 status code via 24 in HTTP 1.1</li>
-                            <li>HTTP 1.1 has a warning header capable of producing many secondary status alerts</li>
-                            <li>HTTP 1.0 authentication unsafe as it is not encrypted</li>
-                            <li>HTTP 1.1 safe as it uses a checksum of username, password and one time value</li>
-                        </ul>
-                        <p>2. For passing user-data using GET method you should use strings parameters in URL. For passing data using POST method, you should use a form on the page or ajax call. Main diffrence is security.</p>
-                        <p>3. facebook.com, gmail.com, privat24.ua</p>
+                        <div class="card">
+                            <div class="card-body">                        
+                                <p>1. List of differences be</p>
+                                <ul>
+                                    <li>HTTP 1.0 can define 16 status code via 24 in HTTP 1.1</li>
+                                    <li>HTTP 1.1 has a warning header capable of producing many secondary status alerts</li>
+                                    <li>HTTP 1.0 authentication unsafe as it is not encrypted</li>
+                                    <li>HTTP 1.1 safe as it uses a checksum of username, password and one time value</li>
+                                </ul>
+                                <p>2. For passing user-data using GET method you should use strings parameters in URL. For passing data using POST method, you should use a form on the page or ajax call. Main diffrence is security.</p>
+                                <p>3. facebook.com, gmail.com, privat24.ua</p>
+                            </div>
+                        </div>
                     </div>
                 </article>               
 
@@ -325,7 +337,7 @@
                                     <li><a href="https://facebook.com">facebook.com</a><p>on login, on search and many components of the page</p></li>
                                     <li><a href="https://gmail.com">gmail.com</a><p>on login</p></li>
                                     <li><a href="https://olx.ua">olx.ua</a><p>on login, on search</p></li>
-                                    <li><a href="https://youtube.com">youtube.com</a><p>on login, on search</p></li>
+                                    <li><a href="https://youtube.com">youtube.com</a><p>on login, on comments</p></li>
                                 </ol>
                                 <p>We can see it on Network tab in 'method' column.</p>
                                 <p>The response text on JSON format or HTML</p>
