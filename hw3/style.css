@@ -46,8 +46,11 @@ body {
 	font-size: 16px;
 	font-family: 'Muli', sans-serif;
 	padding: 10px;
+	line-height: 1.4rem;
 }
-
+.sm-caption {
+	font-size: 11px;
+}
 .clearfix::after {
     display: block;
     clear: both;
@@ -99,4 +102,43 @@ body {
 
 .col .gray-bg {
 	margin-bottom: 30px;
+}
+
+.partners,
+.deal {
+	padding-top: 140px;
+	padding-bottom: 140px;
+}
+
+.category {
+	padding-top: 240px;
+	padding-bottom: 240px;
+}
+
+.memebership {
+	padding-top: 160px;
+	padding-bottom: 160px;	
+}
+.insurance {
+	padding-top: 200px;
+	padding-bottom: 550px;
+}
+
+.description {
+	padding-top: 100px;
+	padding-bottom: 100px;	
+}
+
+.blog {
+	padding-top: 180px;
+	padding-bottom: 290px;	
+}
+
+.descussion {
+	padding-top: 130px;
+	padding-bottom: 150px;	
+}
+
+.col div:last-child {
+	margin-bottom: 0;
 }
