@@ -46,7 +46,7 @@
             <div class="container-fluid">
                 <h1>Home work status</h1>
                 <p>Select home work in sidebar</p>
-                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Hide sidebar</a>
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Hide menu</a>
                 <div>
                     <h3>Useful links</h3>
                     <h4>Home work 1 </h4>
@@ -70,10 +70,10 @@
     <script>
     $("#menu-toggle").click(function(e) {
         console.log($(this).text());
-        if($(this).text() === 'Hide sidebar'){
-            $(this).html("Show sidebar");
+        if($(this).text() === 'Hide menu'){
+            $(this).html("Show menu");
         } else {
-            $(this).html("Hide sidebar");
+            $(this).html("Hide menu");
         }
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");

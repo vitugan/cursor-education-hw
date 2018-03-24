@@ -227,10 +227,10 @@
     <script>
     $("#menu-toggle").click(function(e) {
         console.log($(this).text());
-        if($(this).text() === 'Hide sidebar'){
-            $(this).html("Show sidebar");
+        if($(this).text() === 'Hide menu'){
+            $(this).html("Show menu");
         } else {
-            $(this).html("Hide sidebar");
+            $(this).html("Hide menu");
         }
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
