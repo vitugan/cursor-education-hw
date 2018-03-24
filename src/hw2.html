@@ -9,7 +9,7 @@
                 <p></p>                
                 <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Hide menu</a>
 
-<!--                
+               
                 <article class="hw-task">
                     <header class="alert alert alert-secondary">
                         <h3>Task 1</h3>
@@ -127,7 +127,16 @@
                         </ul>
                     </header>
                     <div class="article_content">
-                        
+                        <div class="row">
+                            <div class="col-md-6 col-xs-12">
+                                <h5>HEAD</h5>
+                                <a href="img/hw2/4_01.jpg" data-lity><img class="img-responsive" src="img/hw2/4_01.jpg"></a>
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                                <H5>GET</H5>
+                                <a href="img/hw2/4_02.jpg" data-lity><img class="img-responsive" src="img/hw2/4_02.jpg"></a>
+                            </div>
+                        </div>
                     </div>
                 </article>               
 
@@ -145,10 +154,15 @@
                         </ul>                        
                     </header>
                     <div class="article_content">
-                        
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Filter is great feature in Network tab. There we can filter response headers by types (CSS, JS, media etc.)</p>
+                                <p>The search field gives us many possibilities for filtering information. We can filter response by domain, by the regular expression. We can do fast search by any string entry.</p>
+                            </div>
+                        </div>
                     </div>
                 </article> 
--->
+
                 <article class="hw-task">
                     <header class="alert alert alert-secondary">
                         <h3>Task 6. Using the&nbsp;<a href="https://www.hurl.it/" target="_blank">hurl.it</a></h3>
@@ -163,14 +177,37 @@
                         </ol>                        
                     </header>
                     <div class="article_content">
-                        <div class="row">
-                            <div class="col-md-4 col-xs-12">
-                                <p><b>Request</b></p>
-                                <a href="img/hw2/6_01.jpg" data-lity><img class="img-responsive" src="img/hw2/6_01.jpg"></a>                            
-                            </div>
-                            <div class="col-md-8 col-xs-12">
-                                <p><b>Response</b></p>
-                                <a href="img/hw2/6_02.jpg" data-lity><img class="img-responsive" src="img/hw2/6_02.jpg"></a>                            
+                        <h3>Result</h3>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4 col-xs-12">
+                                        <p><b>Request</b></p>
+                                        <a href="img/hw2/6_01.jpg" data-lity><img class="img-responsive" src="img/hw2/6_01.jpg"></a>                            
+                                    </div>
+                                    <div class="col-md-8 col-xs-12">
+                                        <p><b>Response</b></p>
+                                        <a href="img/hw2/6_02.jpg" data-lity><img class="img-responsive" src="img/hw2/6_02.jpg"></a>                            
+                                    </div>
+                                </div>
+                                <p><b>Accept: "/" </b> &mdash; the root page is accepted</p>
+                                <p><b>Accept-Encoding: gzip, deflate</b> &mdash; the formats of encoding accepted</p>
+                                <p><b>User-Agent: runscope/0.1</b> &mdash; I'm not found the meaning of this header value.</p>
+                                <p><b>Connection: keep-alive</b> &mdash; the connection is persistent and not closed</p>
+                                <p><b>Content-Encoding: gzip</b> &mdash; indicates that page was encoded with <b>gzip</b> format</p>
+                                <p><b>Date:</b> &mdash - the date and time of request.</p>
+                                <p><b>Keep-Alive: timeout=15</b> &mdash; the connecton has to be idle minimum 15 seconds</p>
+                                <p><b>P2p:</b> &mdash; cookie value</p>
+                                <p><b>Public-Key-Pins: </b> &mdash; the value of cryptographic public key with age of live and it used for all pages of site including subdomains</p>
+                                <p><b>Server: QRATOR</b> &mdash; kind of server that send response (anti DDoS DNS server)</p>
+                                <p><b>Set-Cookie: XXXXX</b> &mdash; the cookies values</p>
+                                <p><b>Strict-Transport-Security: max-age=XXXXXX</b> &mdash; it's a time that the browser should remember that the site is only to be accessed using HTTPS</p>
+                                <p><b>Transfer-Encoding: chunked</b> &mdash; that means that data is sent in a series of chunks.</p>
+                                <p><b>Vary: Accept-Encoding</b> &mdash; I'm not found the meaning of this header value.</p>
+                                <p><b>X-Content-Type-Options: nosniff</b> &mdash; this indicates that the MIME types advertised in the Content-Type headers should not be changed and be followed</p>
+                                <p><b>X-Engine: engine-slave</b> &mdash; not found</p>
+                                <p><b>X-Frame-Options: SAMEORIGIN</b> &mdash; indicates that the page can only be displayed in a frame on the same origin as the page itself</p>
+                                <p><b>X-Powered-By: PHP/XXXX</b> &mdash; it tells about server environment</p>
                             </div>
                         </div>
                     </div>
@@ -182,7 +219,22 @@
                         <ul><li>the same as above task, but you need to create the "HEAD" requests</li></ul>
                     </header>
                     <div class="article_content">
-                        
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Result</h3>
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <h5>Request</h5>
+                                        <a href="img/hw2/7_01.jpg" data-lity><img src="img/hw2/7_01.jpg" alt="" class="img-responsive"></a>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <h5>Response</h5>
+                                        <a href="img/hw2/7_02.jpg" data-lity><img src="img/hw2/7_02.jpg" alt="" class="img-responsive"></a>
+                                    </div>
+                                </div>
+                                <p>All headers from this task I'm descibed in previous tasks</p>
+                            </div>
+                        </div>
                     </div>
                 </article>  
 
