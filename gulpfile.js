@@ -14,7 +14,7 @@ var path = {
 		img: 	'./img',		
 	},
 	src: {
-		html: 	'src/*.html',
+		html: 	'src/**/*.html',
 		css: 	'src/css/*.css',
 		img: 	'src/img/**/*.*',
 	}, 
