@@ -1,6 +1,52 @@
-//= partials/header.html
+<!DOCTYPE html>
+<html lang="en">
 
-        //= partials/sidebar.html
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cursor Home works</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="vendor/lity/lity.min.css">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper" class="toggled">
+
+                <!-- Sidebar -->
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-brand">
+                            <a href="index.html">
+                                Home page
+                            </a>
+                        </li>
+                        <li>
+                            <a href="hw1.html">HW1 - Git & Github </a>
+                        </li>
+                        <li>
+                            <a href="hw2.html">HW2 - Network </a>
+                        </li>
+                        <li>
+                            <a href="hw-tasks/hw3/index.html">HW3 - HTML </a>
+                        </li>
+                        <li>
+                            <a href="hw4.html">HW4 - RWD Homework </a>
+                        </li>
+        
+                    </ul>
+                </div>
+                <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
@@ -75,4 +121,28 @@
         </div>
         <!-- /#page-content-wrapper -->
 
-//= partials/footer.html
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/lity/lity.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        console.log($(this).text());
+        if($(this).text() === 'Hide menu'){
+            $(this).html("Show menu");
+        } else {
+            $(this).html("Hide menu");
+        }
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

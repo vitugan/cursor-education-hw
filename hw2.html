@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cursor Home works</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="vendor/lity/lity.min.css">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper" class="toggled">
+
+                <!-- Sidebar -->
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-brand">
+                            <a href="index.html">
+                                Home page
+                            </a>
+                        </li>
+                        <li>
+                            <a href="hw1.html">HW1 - Git & Github </a>
+                        </li>
+                        <li>
+                            <a href="hw2.html">HW2 - Network </a>
+                        </li>
+                        <li>
+                            <a href="hw-tasks/hw3/index.html">HW3 - HTML </a>
+                        </li>
+                        <li>
+                            <a href="hw4.html">HW4 - RWD Homework </a>
+                        </li>
+        
+                    </ul>
+                </div>
+                <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <h1>HTTP - Homework</h1>
+                <p></p>                
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Hide menu</a>
+
+               
+                <article class="hw-task">
+                    <header class="alert alert alert-secondary">
+                        <h3>Task 1</h3>
+                        <b>Read.</b> <br>
+                        <b><a href="https://code.tutsplus.com/articles/chrome-dev-tools-networking-and-the-console--net-28167" target="_blank">https://code.tutsplus.com/articles/chrome-dev-tools-networking-and-the-console--net-28167</a></b><br>
+                        <b><a href="https://developers.google.com/web/tools/chrome-devtools/network-performance/resource-loading" target="_blank">https://developers.google.com/web/tools/chrome-devtools/network-performance/resource-loading</a></b>
+                    </header>
+                    <div class="article_content">                        
+                        <div class="card">
+                            <div class="card-body">
+                                <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload" target="_blank"><code>DOMContentLoaded</code></a> event is fired when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading</p>
+                                <p>The <code>onload</code> property of the <code>GlobalEventHandlers</code> mixin is an event handler for the <code>load</code> event of a <code>Window</code>, <code>XMLHttpRequest</code>, <code>&lt;img&gt;</code> element, etc., which fires when the resource has loaded.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="hw-task">
+                    <header class="alert alert alert-secondary">
+                        <h3>Task2. Play with Chrome Developers Toolkit (DevTools), and "Network" tab.</h3>
+                        <ol>
+                            <li>Choose&nbsp;at least 5 websites&nbsp;(any) - the list&nbsp;<a href="https://www.similarweb.com/top-websites/ukraine" target="_blank">https://www.similarweb.com/top-websites/ukraine</a>&nbsp;can be used as well (as an example of source of websites), or <a href="http://www.alexa.com/topsites/countries/UA" target="_blank">http://www.alexa.com/topsites/countries/UA</a>, or any of <a href="https://en.wikipedia.org/wiki/List_of_most_popular_websites" target="_blank">https://en.wikipedia.org/wiki/List_of_most_popular_websites</a> lists</li>
+                            <li>Open each of them one by one. <em>(that your browser made). </em>Analyze the GET request/response packagies&nbsp;<em>(the homework should include the whole package text including request-line and headers). </em>Explain each of headers line&nbsp;<em>(what "User-Agent" means? what "Accept" means? what does other means?)</em></li>
+                        </ol>
+                        <p><strong>Expected results</strong></p>
+                        <ol>
+                            <li>the list of websites, with request and response&nbsp;<em>(including the status-line &amp; headers)</em>&nbsp;of each of them</li>
+                            <li>the list of headers&nbsp;<em>(from above requests/responses)</em>&nbsp;with descriptions of each (you need to google &amp; find the purpose of each)</li>
+                        </ol>
+                    </header>
+                    <div class="article_content">                                                
+                        <div class="card">                            
+                            <div class="card-body">                                
+                                <p>I have researched the following websites: google.com.ua, facebook.com, youtube.com, olx.ua, ukr.net. I noticed headers and described them below. I determine that the difference was only in cookies and number of used headers.</p>
+                                <div class="card-text">
+                                    <div class="highlight">
+
+                                        <h5>Status line</h5>
+                                        <b>Request URL:</b> &mdash; show requested URL<br>
+                                        <b>Request Method:</b> &mdash; type of request method<br>
+                                        <b>Status Code:</b> &mdash; response code <br>
+                                        <b>Remote Address:</b> &mdash; server IP and port <br>
+                                        <b>Referrer Policy:</b> no-referrer-when-downgrade<br>
+                                        <hr>
+                                        <b>Response Headers</b><br>
+                                        <b>alt-svc:</b> &mdash; origin server can advertise</br>                                            
+                                        <b>cache-control:</b> &mdash; directives for caching mechanisms in both requests and responses (<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">detail</a>)<br>
+                                        <b>content-encoding:</b> &mdash; used to compress the media-type, value indicates which encodings were applied to the entity-body<br>
+                                        <b>content-type:</b> &mdash;indicate the media type of the recourse, it tells the client what the content type of the returned content actually is<br>
+                                        <b>content-security-policy:</b> &mdash; allows web site administrators to control resources the user agent is allowed to load for a given page</br>
+                                        <b>date:</b> &mdash; the date and time at which the message was originated<br>
+                                        <b>pragma:</b> &mdash; is an implementation-specific header that may have various effects along the request-response chain<br>
+                                        <b>expires:</b> &mdash; the date/time after which the response is considered stale<br>
+                                        <b>vary:</b> &mdash;  determines how to match future request headers to decide whether a cached response can be used rather than requesting a fresh one from the origin server<br>
+                                        <b>p3p:</b> &mdash; Google's cookies<br>
+                                        <b>x-fb-debug:</b> &mdash; Facebook cookies<br>
+                                        <b>server:</b> &mdash; information about the software used by the origin server to handle the request<br>
+                                        <b>set-cookie:</b> &mdash; used to send cookies from the server to the user agent<br>
+                                        <b>strict-transport-security:</b> &mdash; response header (often abbreviated as HSTS)  lets a web site tell browsers that it should only be accessed using HTTPS, instead of using HTTP<br>
+                                        <b>x-frame-options:</b> &mdash; response header can be used to indicate whether or not a browser should be allowed to render a page in a <code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code> or <code>&lt;object&gt;</code> .<br>
+                                        <b>x-xss-protection:</b> &mdash; response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks<br>                                        
+                                        <hr>
+                                        <b>Request Headers</b><br>
+                                        <b>:authority:</b> &mdash; pseudo-header field includes the authority portion of the target URI</br>
+                                        <b>:method:</b> &mdash; pseudo-header, request method type</br>
+                                        <b>:path:</b> &mdash; pseudo-header, server path for current page</br>
+                                        <b>schema:</b> &mdash;  pseudo-header indicates protocol (https/http)</br>
+                                        <b>accept-encoding:</b> &mdash; advertises which content encoding, usually a compression algorithm, the client is able to understand</br>
+                                        <b>accept-language:</b> &mdash; advertises which languages the client is able to understand, and which locale variant is preferred</br>
+                                        <b>cookie:</b> &mdash; contains stored HTTP cookies previously sent by the server with the Set-Cookie header</br>
+                                        <b>upgrade-insecure-requests:</b> &mdash; sends a signal to the server expressing the client’s preference for an encrypted and authenticated response</br>
+                                        <b>user-agent:</b> &mdash; contains a characteristic string that allows the network protocol peers to identify the application type, operating system, software vendor or software version of the requesting software user agent</br>
+                                        <b>x-client-data:</b> &mdash; custom HTTP header</br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </article> 
+                
+                <article class="hw-task">
+                    <header class="alert alert alert-secondary">
+                        <h3>Task3. What are differences between HTTP version 1.0 and 1.1?</h3>
+                        <ul>
+                            <li>navigate your browser to websites what you're frequently use&nbsp;<em>(the company's website, some social networks, etc)</em></li>
+                        </ul>
+                        <p><strong>Expected results</strong></p>
+                        <ol>
+                            <li>list of differences between 1.0 and 1.1</li>
+                            <li>answer to question - how to pass user-data via GET? via POST? what is the diff?</li>
+                            <li>few samples of websites (and cases) where POST method is used</li>
+                        </ol>
+                    </header>
+                    <div class="article_content">
+                        <div class="card">
+                            <div class="card-body">                        
+                                <p>1. List of differences be</p>
+                                <ul>
+                                    <li>HTTP 1.0 can define 16 status code via 24 in HTTP 1.1</li>
+                                    <li>HTTP 1.1 has a warning header capable of producing many secondary status alerts</li>
+                                    <li>HTTP 1.0 authentication unsafe as it is not encrypted</li>
+                                    <li>HTTP 1.1 safe as it uses a checksum of username, password and one time value</li>
+                                </ul>
+                                <p>2. For passing user-data using GET method you should use strings parameters in URL. For passing data using POST method, you should use a form on the page or ajax call. Main diffrence is security.</p>
+                                <p>3. facebook.com, gmail.com, privat24.ua</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>               
+
+                <article class="hw-task">
+                    <header class="alert alert alert-secondary">
+                        <h3>Task4. Use the "telnet" program.</h3>
+                        <ul>
+                            <li>(!) in case if your're under Windows 7/8/10 - google how to enable the "telnet" service on your system</li>
+                            <li>create the GET and HEAD package requests to google.com:80</li>
+                            <li>if you receive the "3**" status code&nbsp;<em>(redirection)</em>, try to manually navigate to new-location url</li>
+                        </ul>
+                        <p><strong>Expected results</strong></p>
+                        <ul>
+                            <li>screenshot with http request</li>
+                            <li>screenshot with http response package with response-code equals to "200 OK"</li>
+                        </ul>
+                    </header>
+                    <div class="article_content">
+                        <div class="card">
+                            <div class="card-body">                                
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <h5>HEAD</h5>
+                                        <a href="img/hw2/4_01.jpg" data-lity><img class="img-responsive" src="img/hw2/4_01.jpg"></a>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <H5>GET</H5>
+                                        <a href="img/hw2/4_02.jpg" data-lity><img class="img-responsive" src="img/hw2/4_02.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>               
+
+
+                <article class="hw-task">
+                    <header class="alert alert alert-secondary">
+                        <h3>Task5. Use actions on "Network" tab.</h3>
+                        <ol>
+                            <li>try to use a "search" &amp; "filter" fields/actions</li>
+                            <li>use ordering by columns, sorting, etc</li>
+                        </ol>
+                        <p><strong>Expected result:</strong></p>
+                        <ul>
+                            <li>describe what feature have you used, and how you can use it in future</li>
+                        </ul>                        
+                    </header>
+                    <div class="article_content">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Filter is great feature in Network tab. There we can filter response headers by types (CSS, JS, media etc.)</p>
+                                <p>The search field gives us many possibilities for filtering information. We can filter response by domain, by the regular expression. We can do fast search by any string entry.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article> 
+
+                <article class="hw-task">
+                    <header class="alert alert alert-secondary">
+                        <h3>Task 6. Using the&nbsp;<a href="https://www.hurl.it/" target="_blank">hurl.it</a></h3>
+                        <ol>
+                            <li>create a GET request to any website</li>
+                            <li>analyze the response</li>
+                        </ol>
+                        <p><strong>Expected result:</strong></p>
+                        <ol>
+                            <li>the HTTP request &amp; response (including request-line / status-line &amp; headers)</li>
+                            <li>description of each header line on response</li>
+                        </ol>                        
+                    </header>
+                    <div class="article_content">
+                        <h3>Result</h3>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4 col-xs-12">
+                                        <p><b>Request</b></p>
+                                        <a href="img/hw2/6_01.jpg" data-lity><img class="img-responsive" src="img/hw2/6_01.jpg"></a>                            
+                                    </div>
+                                    <div class="col-md-8 col-xs-12">
+                                        <p><b>Response</b></p>
+                                        <a href="img/hw2/6_02.jpg" data-lity><img class="img-responsive" src="img/hw2/6_02.jpg"></a>                            
+                                    </div>
+                                </div>
+                                <p><b>Accept: "/" </b> &mdash; the root page is accepted</p>
+                                <p><b>Accept-Encoding: gzip, deflate</b> &mdash; the formats of encoding accepted</p>
+                                <p><b>User-Agent: runscope/0.1</b> &mdash; I'm not found the meaning of this header value.</p>
+                                <p><b>Connection: keep-alive</b> &mdash; the connection is persistent and not closed</p>
+                                <p><b>Content-Encoding: gzip</b> &mdash; indicates that page was encoded with <b>gzip</b> format</p>
+                                <p><b>Date:</b> &mdash - the date and time of request.</p>
+                                <p><b>Keep-Alive: timeout=15</b> &mdash; the connecton has to be idle minimum 15 seconds</p>
+                                <p><b>P2p:</b> &mdash; cookie value</p>
+                                <p><b>Public-Key-Pins: </b> &mdash; the value of cryptographic public key with age of live and it used for all pages of site including subdomains</p>
+                                <p><b>Server: QRATOR</b> &mdash; kind of server that send response (anti DDoS DNS server)</p>
+                                <p><b>Set-Cookie: XXXXX</b> &mdash; the cookies values</p>
+                                <p><b>Strict-Transport-Security: max-age=XXXXXX</b> &mdash; it's a time that the browser should remember that the site is only to be accessed using HTTPS</p>
+                                <p><b>Transfer-Encoding: chunked</b> &mdash; that means that data is sent in a series of chunks.</p>
+                                <p><b>Vary: Accept-Encoding</b> &mdash; I'm not found the meaning of this header value.</p>
+                                <p><b>X-Content-Type-Options: nosniff</b> &mdash; this indicates that the MIME types advertised in the Content-Type headers should not be changed and be followed</p>
+                                <p><b>X-Engine: engine-slave</b> &mdash; not found</p>
+                                <p><b>X-Frame-Options: SAMEORIGIN</b> &mdash; indicates that the page can only be displayed in a frame on the same origin as the page itself</p>
+                                <p><b>X-Powered-By: PHP/XXXX</b> &mdash; it tells about server environment</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>                                 
+
+                <article class="hw-task">
+                    <header class="alert alert alert-secondary">
+                        <h3>Task 7. Using the <a href="https://www.hurl.it/" target="_blank">hurl.it</a></h3>
+                        <ul><li>the same as above task, but you need to create the "HEAD" requests</li></ul>
+                    </header>
+                    <div class="article_content">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Result</h3>
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <h5>Request</h5>
+                                        <a href="img/hw2/7_01.jpg" data-lity><img src="img/hw2/7_01.jpg" alt="" class="img-responsive"></a>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <h5>Response</h5>
+                                        <a href="img/hw2/7_02.jpg" data-lity><img src="img/hw2/7_02.jpg" alt="" class="img-responsive"></a>
+                                    </div>
+                                </div>
+                                <p>All headers from this task I'm descibed in previous tasks</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>  
+
+
+                <article class="hw-task">
+                    <header class="alert alert alert-secondary">
+                        <h3>Task 8. What is the different with GET request?</h3>
+                        <p><strong>Expected result:</strong></p>
+                        <ul>
+                            <li>the HTTP request &amp; response (including request-line / status-line &amp; headers)</li>
+                            <li>the answer to question about differences between HEAD and GET methods</li>
+                        </ul>
+                    </header>
+                    <div class="article_content">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>The diffrence between HEAD and GET response its amount of containing information. HEAD repsonse counatin only short info about page and don't have message body.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>  
+
+
+                <article class="hw-task">
+                    <header class="alert alert alert-secondary">
+                        <h3>Task 9. Find and show few (at least 5) resources, where POST method is used</h3>
+                        <ol>
+                            <li>list the URLs of resources</li>
+                            <li>explain how did you detect that POST method was used?</li>
+                            <li>what response was returned after request has been sent?</li>
+                        </ol>
+                        <p><strong>Expected result:</strong></p>
+                        <ul>
+                            <li>list with websites &amp; description where POST is used there</li>
+                            <li>answer to question why the POST is used there</li>
+                        </ul>
+                    </header>
+                    <div class="article_content">
+                        <h3>Result</h3>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>List of urls</p>
+                                <ol>
+                                    <li><a href="https://google.com">google.com</a><p>on click the search button.</p></li>
+                                    <li><a href="https://facebook.com">facebook.com</a><p>on login, on search and many components of the page</p></li>
+                                    <li><a href="https://gmail.com">gmail.com</a><p>on login</p></li>
+                                    <li><a href="https://olx.ua">olx.ua</a><p>on login, on search</p></li>
+                                    <li><a href="https://youtube.com">youtube.com</a><p>on login, on search</p></li>
+                                </ol>
+                                <p>We can see it on Network tab in 'method' column.</p>
+                                <p>The response text on JSON format or HTML</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>  
+
+                <article class="hw-task">
+                    <header class="alert alert alert-secondary">
+                        <h3>Task 10. Using the Postman extension</h3>
+                        <ul><li>set it up, if not installed yet</li><li>send 5 any requests (including HEAD, GET &amp; POST) to any website</li></ul>
+                        <p><strong>Expected result:</strong></p>
+                        <ul><li>screenshot with request &amp; response from Postman</li></ul>
+                    </header>
+                    <div class="article_content">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <a href="img/hw2/10_01.jpg" data-lity><img src="img/hw2/10_01.jpg" alt="" class="img-responsive"></a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="img/hw2/10_02.jpg" data-lity><img src="img/hw2/10_02.jpg" alt="" class="img-responsive"></a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="img/hw2/10_03.jpg" data-lity><img src="img/hw2/10_03.jpg" alt="" class="img-responsive"></a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="img/hw2/10_04.jpg" data-lity><img src="img/hw2/10_04.jpg" alt="" class="img-responsive"></a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="img/hw2/10_05.jpg" data-lity><img src="img/hw2/10_05.jpg" alt="" class="img-responsive"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article> 
+
+                <article class="hw-task">
+                    <header class="alert alert alert-secondary">
+                        <h3>Task 11. Find any free hosting that provides FTP accessgoogle "ftp free hosting", or "free hosting", etc</h3>
+                        <ol>
+                            <li>proceed registration, confirmation &amp; get your ftp access credentials (host/port, login, password)</li>
+                            <li>using any ftp client, deploy any static files (html, any images, etc)</li>
+                            <li>provide an url&nbsp;<em>(http link)</em>&nbsp;that navigates to uploaded file</li>
+                        </ol>
+                    </header>
+                    <div class="article_content">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="http://cursor.cc.ua/homepage.jpg">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </article> 
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/lity/lity.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        console.log($(this).text());
+        if($(this).text() === 'Hide menu'){
+            $(this).html("Show menu");
+        } else {
+            $(this).html("Hide menu");
+        }
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

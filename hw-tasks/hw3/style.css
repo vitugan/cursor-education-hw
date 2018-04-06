@@ -1,0 +1,144 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Muli', sans-serif;
+	padding: 10px;
+	line-height: 1.4rem;
+}
+.sm-caption {
+	font-size: 11px;
+}
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.gray-bg {
+	background-color: #b2b2b2;
+	padding: 30px;
+	text-align: center;
+}
+.gray-bg span {
+	color: #fff;
+}
+.tor-bar {
+	margin-bottom: 30px;
+}
+
+.logo {
+	width: 15%;
+	float: left;
+}
+.banner {
+	width: 30%;
+	float:right;
+}
+.main-content,
+.main-nav {
+	margin-bottom: 30px;
+}
+
+.col1,
+.col2,
+.col3 {
+	float: left;		
+}
+.col1 {
+	width: 48%;
+	padding-right: 2%;
+}
+.col2 {
+	padding-right: 2%;	
+}
+
+.col2,
+.col3 {
+	width: 24%;
+}
+
+.col .gray-bg {
+	margin-bottom: 30px;
+}
+
+.partners,
+.deal {
+	padding-top: 140px;
+	padding-bottom: 140px;
+}
+
+.category {
+	padding-top: 240px;
+	padding-bottom: 240px;
+}
+
+.memebership {
+	padding-top: 160px;
+	padding-bottom: 160px;	
+}
+.insurance {
+	padding-top: 200px;
+	padding-bottom: 550px;
+}
+
+.description {
+	padding-top: 100px;
+	padding-bottom: 100px;	
+}
+
+.blog {
+	padding-top: 180px;
+	padding-bottom: 290px;	
+}
+
+.descussion {
+	padding-top: 130px;
+	padding-bottom: 150px;	
+}
+
+.col div:last-child {
+	margin-bottom: 0;
+}
