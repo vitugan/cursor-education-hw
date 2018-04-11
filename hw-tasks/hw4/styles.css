@@ -148,11 +148,20 @@ ul {
 		margin-right: 20px;
 	}
 }
-@media screen and (max-width: 375px ) {
-	.hide-sm { display: none; }
+@media screen and (max-width: 1024px){
 	.container {
 		width: 100%;
 	}
+	.content-img {
+		flex: 0 0 50%;
+	}
+	.footer-ul li {
+		width: 122px;
+	}
+}
+@media screen and (max-width: 465px ) {
+	.hide-sm { display: none; }
+
 	.header .row {
 		padding-top: 20px;
 		padding-bottom: 20px;
@@ -199,5 +208,8 @@ ul {
 	}
 	.footer-col {
 		width: 90%;
+	}
+	.footer-ul li {
+		width: 100%;
 	}
 }

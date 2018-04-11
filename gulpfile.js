@@ -11,17 +11,20 @@ var path = {
 	build: {
 		html: 	'./',
 		css: 	'./css',
+		js: 	'./js',
 		img: 	'./img',		
 	},
 	src: {
 		html: 	'src/*.html',
 		css: 	'src/css/*.css',
+		js: 	'src/js/*.js',
 		img: 	'src/img/**/*.*',
 	}, 
 	watch: {
 		html: 'src/**/*.html',
 		style: 'src/css/*.css',
-		img: 'src/img/**/*.*'
+		img: 'src/img/**/*.*',
+		style: 'src/js/*.js',
 	},
 	clean: './'
 };
@@ -56,11 +59,17 @@ gulp.task('img:build', function(){
     	.pipe(reload({stream: true}));
 });
 
+gulp.task('js:build', function(){
+	gulp.src(path.src.js)
+		.pipe(gulp.dest(path.build.js))
+    	.pipe(reload({stream: true}));
+});
 
 gulp.task('build', [
     'html:build',   
     'style:build',
-    'img:build'
+    'img:build',
+    'js:build'
 ]);
 
 gulp.task('watch', function(){
@@ -73,6 +82,9 @@ gulp.task('watch', function(){
     watch([path.watch.img], function(event, cb) {
         gulp.start('img:build');
     });
+    watch([path.watch.js], function(event, cb) {
+        gulp.start('js:build');
+    });    
 });
 
 

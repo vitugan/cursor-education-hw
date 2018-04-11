@@ -4,6 +4,10 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
  */
 
+h4 {
+  font-size: 18px;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -184,3 +188,61 @@ p > code {
 .highlight h5 {
   margin-bottom: 0;
 }
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);  
+}
+
+.panel-default {
+    border-color: #ddd;
+}
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.panel-heading h4,
+.panel-heading p {
+  margin: 0;
+}
+.panel-body {
+    padding: 15px;
+}
+
+
+
+div.code-toolbar > .toolbar {
+  left: .2em; 
+  
+}
+
+.panel-title {
+  color: #212529;
+}
+a.panel-title:hover {
+ color: #64686d; 
+}
+
+/*
+
+*/ 
+.accordion-toggle {
+  cursor: pointer;
+}
+
+<style>
+  .accordion-toggle {cursor: pointer;}
+  .accordion-content {display: none;}
+  .accordion-content.default {display: block;}
+</style>
