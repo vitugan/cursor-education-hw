@@ -227,22 +227,19 @@ div.code-toolbar > .toolbar {
   
 }
 
-.panel-title {
-  color: #212529;
-}
-a.panel-title:hover {
- color: #64686d; 
-}
-
-/*
-
-*/ 
 .accordion-toggle {
   cursor: pointer;
 }
 
-<style>
-  .accordion-toggle {cursor: pointer;}
-  .accordion-content {display: none;}
-  .accordion-content.default {display: block;}
-</style>
+.accordion h4 {
+  margin-bottom: 20px;
+}
+.accordion-toggle {
+  cursor: pointer;
+  }
+.accordion-content {
+  display: none;
+  margin-bottom: 30px;
+}
+
+.accordion-content.default {display: block;}
