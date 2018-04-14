@@ -83,7 +83,7 @@ ul {
 	flex: 1 auto;
 }
 .content-img {
-	flex: 0 0 400px;	
+	flex: 0 0 50%;	
 	background-color: #ffbd00;
 	margin-right: 40px;
 	margin-bottom: 30px;
@@ -208,8 +208,11 @@ ul {
 	}
 	.footer-col {
 		width: 90%;
+		margin-bottom: 10px;
+		padding: 15px 10px;
 	}
 	.footer-ul li {
 		width: 100%;
+		margin-bottom: 0;
 	}
 }
