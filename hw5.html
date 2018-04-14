@@ -50,7 +50,9 @@
                 <li>
                     <a href="hw5.html">HW5 - JS Essential </a>
                 </li>
-
+                <li>
+                    <a href="hw6.html">DOM&BOM - JS Essential </a>
+                </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -224,6 +226,17 @@ function average_num(arr){
     var average = Math.round((sum / arr.length) * 100) / 100;
     return average;
  }
+</code></pre>
+</div>
+
+
+<h4 class="accordion-toggle">2.1 Write a function that reverse a number. For i.e. input 32243 should returns 34223.</h4>
+<div class="accordion-content default">
+<pre><code class="language-js">
+function num_reverse(n){
+    n = n + '';
+    return parseInt(n.split("").reverse().join(""));
+}
 </code></pre>
 </div>
 
