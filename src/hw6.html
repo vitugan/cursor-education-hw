@@ -15,7 +15,7 @@
                         <p>(task "validation") Implement validation for form below</p>
                     </header>
                     <div class="article_content">                        
-                        <h4>Link to page with <a href="hw-tasks/hw6/index.html">form</a></h4>
+                        <h4>Link to page with <a href="hw-tasks/hw6/task1/index.html">form</a></h4>
 <pre><code class="language-js">
 (function(w, d){        
     
@@ -26,12 +26,9 @@
     var input_date      = createElWithAttrs('input', {'type': 'text', 'name': 'date'});
     var input_button    = createElWithAttrs('input', {'type': 'submit', 'value': 'Validate Me', });    
 
-    userForm.appendChild(input_age);
-    userForm.appendChild('br');
-    userForm.appendChild(input_username);
-    userForm.appendChild('br');
-    userForm.appendChild(input_date);
-    userForm.appendChild('br');
+    userForm.appendChild(input_age);    
+    userForm.appendChild(input_username);    
+    userForm.appendChild(input_date);    
     userForm.appendChild(input_button);
 
     d.body.insertAdjacentElement('afterbegin', userForm);
