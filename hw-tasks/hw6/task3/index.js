@@ -11,12 +11,12 @@ var navigatorMessageMap = {
 
 var platform = navigator.platform.toLowerCase();
 
-for(var key in navigatorMessageMap){
-    console.log(key);
-    key = key.toLowerCase;
-    var version = navigatorMessageMap[key];
+for(var key in navigatorMessageMap){    
     
-    // if (platform.indexOf(key)>=0){
-
-    // }
+    var version = navigatorMessageMap[key];
+        
+    if (platform === key){        
+        var message = document.querySelectorAll('[data-version="'+version+'"]');        
+        message[0].style.display = 'block';
+    }
 }
