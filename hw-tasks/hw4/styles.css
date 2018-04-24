@@ -124,9 +124,7 @@ ul {
 	-webkit-justify-content: center;
 	        justify-content: center;
 }
-.footer-ul {
-	
-}
+
 .footer-ul li {
 	background-color: #038042;
 	width: 180px;
@@ -216,7 +214,7 @@ ul {
 		margin-right: 0;
 	}
 	.footer-ul li {
-		width: 100%;
+		width: 65%;
 		margin-bottom: 0;
 	}
 }

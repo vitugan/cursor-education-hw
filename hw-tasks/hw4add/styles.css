@@ -58,8 +58,8 @@ article header {
 		justify-content: space-between;
 	}
 	article {
-		padding-right: 10px;
-		flex-basis: 50%;
+		/*padding-right: 10px;*/
+		flex-basis: 49.5%;
 	}
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -69,10 +69,7 @@ article header {
 }
 @media screen and (min-width: 1024px){
 	article {
-		padding-right: 10px;
-		flex-basis: 33%;
-	}
-	article:nth-child(n+3) {
-		padding-right: 0;
+		
+		flex-basis: 32.8%;
 	}	
 }
