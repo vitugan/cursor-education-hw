@@ -22,7 +22,15 @@ for (var i=0; i<langEls.length; i++) {
 var $save = document.getElementById('save');
 
 $save.addEventListener('click', function(){
-    var lang = document.getElementById('languages');
+    // var lang = document.getElementById('languages');
+    var lang = document.getElementsByName('lang');
     // window.location.hash = lang.value;
+    for(var i = 0; i < lang.length; i++){
+        if(lang[i].checked === true){
+            var lang = lang[i].value;
+            window.location.hash = lang;
+            console.log(lang)
+        }
+    }
     console.log(lang);
 });
