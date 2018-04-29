@@ -1,15 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 h1 {
-    margin: 0;
-  }
-  
-  .content {
-    background: blue;
-    height: 150px;
-  }
-  
-  #parallax {
-    background: red;
-    
-    background: url(http://www.verticalworld.net/school/programs/uploads/pics/program_108_1.jpg);
-    height: 150px;
-  }
+  margin: 0;
+}
+
+.content {
+  background: blue;
+  height: 150px;
+}
+
+#parallax {
+  background: red;  
+  background: url(http://www.verticalworld.net/school/programs/uploads/pics/program_108_1.jpg) no-repeat fixed;
+  background-size: cover;
+  height: 150px;
+}
