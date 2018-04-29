@@ -1,13 +1,10 @@
-var applyLanguage = function (lang) {
-	alert('now language is: ' + lang);
+var applyLanguage = function (lang) {       
     var langEls = document.getElementsByClassName('lang');    
     for (var i=0; i<langEls.length; i++) {        
         var langEl = langEls[i];        
-        if(langEl.classList.contains('lang-' + lang)){
-            langEl.style.display = 'inline';
+        if(langEl.classList.contains('lang-' + lang)){            
             langEl.classList.add('visible');
-        } else {
-            langEl.style.display = 'none';
+        } else {            
             langEl.classList.remove('visible');
         }
     }
@@ -28,6 +25,12 @@ var getCurrentLanguage = function () {
     var defaultLanguage = 'ua';
     return window.location.hash.substring(1) || defaultLanguage;    
 }
+var $username = document.getElementById('username');
+var username = prompt('Enter your name');
+if(username === ""){
+    username = 'username';
+} 
+$username.innerHTML = username;
 
 var currentLang = getCurrentLanguage();
 var langEls = document.getElementsByClassName('lang-' + currentLang);
@@ -43,7 +46,7 @@ $save.addEventListener('click', function(){
     
     for(var i = 0; i < lang.length; i++){
         if(lang[i].checked === true){            
-            var lang = lang[i].value;                                   
+            lang = lang[i].value;                                   
             applyLanguage(lang);
             window.location.hash = lang;
         }
