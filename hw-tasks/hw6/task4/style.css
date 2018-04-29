@@ -4,5 +4,6 @@
   
   .lang.visible {
     display: inline;
+    visibility: visi;
     // @todo: visibility? font-size? etc?
   }
