@@ -32,8 +32,10 @@
         var re_date = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
 
         if( !re_date.test(input_date.value) || !re_age.test(input_age.value) || !re_username.test(input_username.value )){
-           alert("your data is invalid");
-        } 
+           alert("Your data is invalid");
+        }  eles {
+            alert("Your data is valid");
+        }
 
         return false;
     } 
