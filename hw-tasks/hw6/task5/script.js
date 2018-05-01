@@ -4,19 +4,19 @@ var box3 = document.getElementById('box3');
 var a = document.getElementById('preventDefault');
 
 var onClick = function (e) {
-	var $el = e.target;
-  
-  //e.stopPropagation();
-	
-  $el.style.backgroundColor = 'yellow';
-	console.log($el);
+	var $el = e.target;  
+  //e.stopPropagation();	
+  $el.style.backgroundColor = 'yellow';	
   //$el.style.backgroundColor = '';
 }
+var onClick1 = function (e){
+  console.log('click on box1');  
+}
+
 var preventLinkEvents = function (e) {
 	e.preventDefault();
 }
 
-//document.body.onclick = onClick;
 box1.onclick = onClick;
 box2.onclick = onClick;
 box3.onclick = onClick;
