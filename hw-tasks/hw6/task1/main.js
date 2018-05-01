@@ -33,7 +33,7 @@
 
         if( !re_date.test(input_date.value) || !re_age.test(input_age.value) || !re_username.test(input_username.value )){
            alert("Your data is invalid");
-        }  eles {
+        }  else {
             alert("Your data is valid");
         }
 
