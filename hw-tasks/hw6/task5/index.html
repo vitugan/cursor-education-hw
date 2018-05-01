@@ -8,19 +8,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="box1" class="box">
-        <div id="box2" class="box">
-          <div id="box3" class="box">
-          
-          </div>
+    <div class="container">
+        <div class="left">
+            <div id="box1" class="box">
+                <div id="box2" class="box">
+                    <div id="box3" class="box">                
+                    </div>
+                </div>
+            </div>            
+            <div>
+                <p><b>preventDefault()</b> &mdash; event method prevent default browser event on the targeted element.<br> <b>but did't stop event propagation on parent element.</b>.</p>
+                <p>You can see it on example. The background of parent elements was changed on click too.</p>
+            </div>
         </div>
-      </div>
-      
-      <div>
-      <p><b>preventDefault()</b> &mdash; method prevent default browser event on the targeted element.</p>
-      <p>On a this <a id="preventDefault" href="https://developer.mozilla.org/ru/docs/Web/API/Event/preventDefault" target="_blank">link</a> - "preventDefault" method was applied.</p>
-      <p><b>stopPropagation()</b> &mdash; only prevent propagation event on the parent elements on DOM tree.</p>
-      </div>
+        <div class="right">
+            <div id="box11" class="box">
+                <div id="box22" class="box">
+                    <div id="box33" class="box">                
+                    </div>
+                </div>
+            </div>            
+            <div>
+                <p><b>stopPropagation()</b> &mdash; event method stop propagation event on parent elements. <br>You can see it at example. The background changes only on targeted element.</p>                
+            </div>
+        </div>
+    </div>
       <script src="script.js"></script>
 </body>
 </html>

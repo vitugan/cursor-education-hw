@@ -1,14 +1,21 @@
+#box11,
 #box1 {
     background: red;
     width: 200px; height: 200px;
   }
-  
+  #box22,
   #box2 {
     background: green;
     width: 150px; height: 150px;
   }
-  
+  #box33,
   #box3 {
     background: blue;
     width: 100px; height: 100px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-around
   }

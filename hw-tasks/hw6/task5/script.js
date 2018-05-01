@@ -1,23 +1,30 @@
 var box1 = document.getElementById('box1');
 var box2 = document.getElementById('box2');
 var box3 = document.getElementById('box3');
+var box11 = document.getElementById('box11');
+var box22 = document.getElementById('box22');
+var box33 = document.getElementById('box33');
 var a = document.getElementById('preventDefault');
 
-var onClick = function (e) {
-	var $el = e.target;  
-  //e.stopPropagation();	
-  $el.style.backgroundColor = 'yellow';	
-  //$el.style.backgroundColor = '';
-}
-var onClick1 = function (e){
-  console.log('click on box1');  
+var onClickPrevent = function (e) {  
+  var $el = e.target;    
+  e.preventDefault();
+  changeColor(this);
 }
 
-var preventLinkEvents = function (e) {
-	e.preventDefault();
+var onClickStop = function (e) {    
+  e.stopPropagation();
+  changeColor(this);
 }
 
-box1.onclick = onClick;
-box2.onclick = onClick;
-box3.onclick = onClick;
-a.onclick = preventLinkEvents;
+var changeColor = function(el){
+  el.style.backgroundColor = 'yellow';	  
+}
+
+box1.onclick = onClickPrevent;
+box2.onclick = onClickPrevent;
+box3.onclick = onClickPrevent;
+
+box11.onclick = onClickStop;
+box22.onclick = onClickStop;
+box33.onclick = onClickStop;
