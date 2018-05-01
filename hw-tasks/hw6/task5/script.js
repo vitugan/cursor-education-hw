@@ -4,10 +4,8 @@ var box3 = document.getElementById('box3');
 var box11 = document.getElementById('box11');
 var box22 = document.getElementById('box22');
 var box33 = document.getElementById('box33');
-var a = document.getElementById('preventDefault');
 
-var onClickPrevent = function (e) {  
-  var $el = e.target;    
+var onClickPrevent = function (e) {    
   e.preventDefault();
   changeColor(this);
 }
