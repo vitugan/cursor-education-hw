@@ -6,29 +6,42 @@ function Goods(options){
 }
 
 Goods.prototype.findGoods = function (){
-    return 'Stored in - ' + this.place;
+    return this.place;
 }
-Goods.prototype.getWeight = function (){
-    return 'Weight is - ' + (this.weight * this.amount).toFixed(2);
+Goods.prototype.getWeight = function (){    
+    return this.weight
 }
 
 Goods.prototype.getPrice = function (){
-    return 'Price is - $' + this.price;
+    return this.price;
 }
 
-Goods.prototype.getBill = function (){
-    /* return this.place + ' department \n' + ; */
-    return (this.price * this.weight).toFixed(2);
+Goods.prototype.getBill = function (amount){    
+    var totalSum = (this.price * amount).toFixed(2);
+    var totalWeight = (amount * this.getWeight()).toFixed(2);
+    return '  BILL   \n' +
+        this.place + ' department \n' 
+        + '------------------------ \n'
+        + 'Amount items ' + amount + '\n'
+        + 'Total weight ' + totalWeight + 'kg \n'
+        + 'Price $      ' + this.price + '\n'
+        + '------------------------ \n'
+        + 'Total sum $' + totalSum ;
+    //return (this.price * this.weight).toFixed(2);
 }
 
-Goods.prototype.buy = function (){
-    return (this.price * this.amount).toFixed(2);
+Goods.prototype.buy = function (amount){
+    if((this.amount - amount) < 1) {
+        console.log('We have only '+this.amount+' of items');
+        return false;
+    } else {
+        this.amount -= amount;
+        console.log(this.getBill(amount));        
+    }       
 }
 
 var apple = new Goods({weight: 2, price: 5, place: 'Grocery'});
 
-console.log(apple.findGoods());
-console.log(apple.getWeight());
-console.log(apple.getPrice());
+
 console.log(apple.buy(10));
-console.log(apple);
+//console.log(apple.amount);
