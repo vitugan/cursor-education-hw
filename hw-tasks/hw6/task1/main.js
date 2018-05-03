@@ -1,10 +1,13 @@
 (function(w, d){        
     
     var userForm = d.createElement('form'); 
+    userForm.setAttribute('name', 'login');
+    userForm.setAttribute('action', 'https://git.io/vpgdy');
+    userForm.setAttribute('name', 'login');
 
     var input_age       = createElWithAttrs('input', {'type': 'text', 'name': 'login', 'placeholder': 'Age'});
-    var input_username  = createElWithAttrs('input', {'type': 'text', 'name': 'username', 'placeholder': 'User name'});
-    var input_date      = createElWithAttrs('input', {'type': 'text', 'name': 'date', 'placeholder': 'Date'});
+    var input_username  = createElWithAttrs('input', {'type': 'text', 'name': 'username', 'placeholder': 'Name user_xxx'});
+    var input_date      = createElWithAttrs('input', {'type': 'text', 'name': 'date', 'placeholder': 'dd/mm/yyyy'});
     var input_button    = createElWithAttrs('input', {'type': 'submit', 'value': 'Validate Me', });    
     
     
@@ -34,7 +37,7 @@
         if( !re_date.test(input_date.value) || !re_age.test(input_age.value) || !re_username.test(input_username.value )){
            alert("Your data is invalid");
         }  else {
-            alert("Your data is valid");
+            userForm.submit();            
         }
 
         return false;
