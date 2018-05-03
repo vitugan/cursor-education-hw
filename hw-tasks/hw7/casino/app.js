@@ -1,20 +1,21 @@
 function Casino(options){
     this.machinesCount = options.machinesCount;
-    this.totalCash = options.totalCash;
-    var casinoMachines = [];
+    this.totalCash = options.totalCash;    
+    this.casinoMachines = [];
     if(this.machinesCount>0){
-        for(var i =0; i<machinesCount; i++){
-            casinoManhines[] = CreateSlotMachine(cash);
+        for(var i =0; i<this.machinesCount; i++){
+            this.casinoMachines.push(CreateSlotMachine());
         }
     }
 
-    function CreateSlotMachine(options){
-        var machineCash = this.totalCash / this.machinesCount;
-        return new SlotMachine(options);
+    function CreateSlotMachine() {
+        var machineCash = (this.totalCash / this.machinesCount).toFixed(2);
+        return new SlotMachine({cash: machineCash, lackbox: false });
     }
+    CreateSlotMachine();
 }
 Casino.prototype.getTotalSum = function(){
-    return this.total_cash;
+    return this.totalCash;
 }
 Casino.prototype.getMachinesCount = function(){
     var machines;
@@ -34,3 +35,5 @@ SlotMachine.prototype.getTotalSum = function(){}
 SlotMachine.prototype.cashOut = function(){}
 SlotMachine.prototype.cashIn = function(){}
 SlotMachine.prototype.letsPlay = function(){}
+
+var casino = new Casino({machinesCount: 5, totalCash: 100});
