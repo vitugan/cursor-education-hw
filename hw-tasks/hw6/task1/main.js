@@ -1,8 +1,6 @@
 (function(w, d){        
     
-    var userForm = d.createElement('form');
-    var currentDate = getCurrentDate(); 
-    console.log(currentDate);
+    var userForm = d.createElement('form');        
     userForm.setAttribute('name', 'login');
     userForm.setAttribute('action', 'https://git.io/vpgdy');
     userForm.setAttribute('name', 'login');
@@ -19,7 +17,7 @@
     userForm.appendChild(input_date);    
     userForm.appendChild(input_button);
     d.body.insertAdjacentElement('afterbegin', userForm);
-    userForm.addEventListener('submit', validate);
+    userForm.addEventListener('submit', validate);    
 
     function createElWithAttrs(tag, attrs){
         var _el = d.createElement(tag);
@@ -32,14 +30,20 @@
     
     function validate(e){
         e.preventDefault();
+        var currentDate = getCurrentDate(); 
+        var isDate = true;
         var re_age = /^[0-9]+$/;
         var re_username = /^user_@?\w+(\.[\w]{1,3})?$/;        
         var re_date = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
 
-        if( !re_date.test(input_date.value) || !re_age.test(input_age.value) || !re_username.test(input_username.value )){
-           alert("Your data is invalid");
+        if(!re_date.test(input_date.value) && input_date.value != currentDate ) {            
+            return isDate = false;
+        }
+
+        if( isDate && re_age.test(input_age.value) && re_username.test(input_username.value )){
+            userForm.submit();           
         }  else {
-            userForm.submit();            
+            alert("Your data is invalid");            
         }
 
         return false;

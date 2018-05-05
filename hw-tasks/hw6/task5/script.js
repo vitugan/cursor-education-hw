@@ -6,8 +6,12 @@ var box22 = document.getElementById('box22');
 var box33 = document.getElementById('box33');
 
 var onClickPrevent = function (e) {    
+  var $el = e.target;
   e.preventDefault();
-  changeColor(this);
+  
+  if(this != $el) {
+    changeColor(this);
+  }
 }
 
 var onClickStop = function (e) {    
