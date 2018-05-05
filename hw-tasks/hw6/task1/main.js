@@ -1,14 +1,16 @@
 (function(w, d){        
     
-    var userForm = d.createElement('form'); 
+    var userForm = d.createElement('form');
+    var currentDate = getCurrentDate(); 
+    console.log(currentDate);
     userForm.setAttribute('name', 'login');
     userForm.setAttribute('action', 'https://git.io/vpgdy');
     userForm.setAttribute('name', 'login');
 
     var input_age       = createElWithAttrs('input', {'type': 'text', 'name': 'login', 'placeholder': 'Age'});
     var input_username  = createElWithAttrs('input', {'type': 'text', 'name': 'username', 'placeholder': 'Name user_xxx'});
-    var input_date      = createElWithAttrs('input', {'type': 'text', 'name': 'date', 'placeholder': 'dd/mm/yyyy'});
-    var input_button    = createElWithAttrs('input', {'type': 'submit', 'value': 'Validate Me', });    
+    var input_date      = createElWithAttrs('input', {'type': 'text', 'name': 'date', 'placeholder': currentDate});
+    var input_button    = createElWithAttrs('input', {'type': 'submit', 'value': 'Validate Me' });    
     
     
 
@@ -42,6 +44,18 @@
 
         return false;
     } 
+
+    function getCurrentDate(){
+        var current = new Date();
+        var d = current.getDate();
+        var m = current.getMonth()+1;
+        var y = current.getFullYear();
+        
+        d = ( d < 10 ) ? '0' + d : d;
+        m = ( m < 10 ) ? '0' + m : m;
+
+        return d + "/" + m + "/" + y;
+    }
 
     
 }(window, document));
