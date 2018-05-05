@@ -7,8 +7,7 @@ var box33 = document.getElementById('box33');
 
 var onClickPrevent = function (e) {    
   var $el = e.target;
-  e.preventDefault();
-  
+  e.preventDefault();  
   if(this != $el) {
     changeColor(this);
   }
