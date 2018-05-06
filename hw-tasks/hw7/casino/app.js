@@ -2,8 +2,7 @@ function Casino(options){
     const _self = this;
     this.machinesCount = options.machinesCount;
     this.totalCash = options.totalCash;    
-    this.casinoMachines = [];    
-    const cashDistribution = this.getCashDistribution(_self.totalCash, _self.machinesCount);
+    this.casinoMachines = [];
     
     if(Number.isInteger(this.machinesCount) && this.machinesCount>0){
         for(var i =0; i<this.machinesCount; i++){            
@@ -13,55 +12,69 @@ function Casino(options){
         throw 'CASINO: Entered count of Slot Mashines must be 1 or more';
     }
 
-    function createSlotMachine(id) {        
+    function createSlotMachine(id) {      
+        let cashIn = Math.floor(_self.totalCash / _self.machinesCount);
+        let reminder = _self.totalCash % _self.machinesCount
         if( id === 0 ){
-            return new SlotMachine({cash: cashDistribution.cashPerMachine + cashDistribution.reminder , luckbox: true });
+            return new SlotMachine({cash: cashIn + reminder , luckbox: true });
         } else {
-            return new SlotMachine({cash: cashDistribution.cashPerMachine , luckbox: false });
+            return new SlotMachine({cash: cashIn , luckbox: false });
         }
         
     }
-    this.getCashDistribution = function(cash, count){        
-        const sum = Math.floor(cash / count);
-        const reminder = cash - (sum * count);
-        return {sum: sum, reminder: reminder };
-    }    
     createSlotMachine();
 
 }
 Casino.prototype.getTotalSum = function(){
     return this.totalCash;
 }
-Casino.prototype.getMachinesCount = function(){
-    var machines;
-    return machines;
+Casino.prototype.getMachinesCount = function(){    
+    return this.casinoMachines.length;
 }
-Casino.prototype.addMachine = function(){    
-    let max = Math.max.apply(Math, this.casinoMachines.map(function(o){return o.cash;}));        
+Casino.prototype.addMachine = function(){
+    let maxCash = Math.max.apply(Math, this.casinoMachines.map(function(o){return o.cash;}));        
     let mashineMaxCashIndex = this.casinoMachines.findIndex(function(e){
-        if(e.cash === max){
+        if(e.cash === maxCash){
             return e;
         }
     });
-    console.log('Mashines ', this.casinoMachines);
-    console.log('Max function: ', Math.max.apply(Math, this.casinoMachines.map(function(o){return o.cash;})));
-    console.log('Max: ', max);
-    console.log('Array index: ', mashineMaxCashIndex);
-    let halfFromMachine = this.getCashDistribution(max, 2);
-    //console.log(this.casinoMachines[mashineMaxCashIndex].cash = halfFromMachine.sum);
-    console.log(this.casinoMachines[mashineMaxCashIndex]);
-    //return Math.max.apply(Math, this.casinoMachines.map(function(o){return o.cash;}));
-    
+    let halfFromMachine = Math.floor(maxCash / 2);
+    let reminder = maxCash % 2;
+    this.casinoMachines[mashineMaxCashIndex].cash = halfFromMachine + reminder;
+    this.casinoMachines.push(new SlotMachine({cash: halfFromMachine, luckbox: false}));
 }
-Casino.prototype.removeMachine = function(){}
+Casino.prototype.removeMachine = function(id){
+    let sum = this.casinoMachines[id].cash;
+    this.casinoMachines.splice(id, 1);
+    this.machinesCount = this.getMachinesCount();
+    
+    let sumPerMashine = Math.floor(sum / this.machinesCount );
+    let reminder = sum % this.machinesCount;
 
-Casino.prototype.cashOut = function(){}
+    this.casinoMachines.forEach(function(el, index){
+        if(index === 0){
+            el.cash += sumPerMashine + reminder;
+        } else {
+            el.cash += sumPerMashine;
+        }        
+    });
+}
 
-Casino.prototype.getCashDistribution = function(cash, count){        
-    const sum = Math.floor(cash / count);
-    const reminder = cash - (sum * count);
-    return {sum: sum, reminder: reminder };
-}    
+Casino.prototype.cashOut = function(sum){
+    
+    let sumPerMashine = Math.floor(sum / this.machinesCount );
+    let reminder = sum % this.machinesCount;
+
+    this.casinoMachines.forEach(function(el, index){
+        if(index === 0){
+            el.cash -= sumPerMashine + reminder;
+        } else {
+            el.cash -= sumPerMashine;
+        }        
+    });
+}
+
+  
 /**
  * 
  * @param {cash: Number, luckbo: Bool } options 
@@ -70,15 +83,28 @@ function SlotMachine(options){
     this.cash = options.cash;
     this.luckbox = options.luckbox;
 }
-SlotMachine.prototype.getTotalSum = function(){}
-SlotMachine.prototype.cashOut = function(){}
-SlotMachine.prototype.cashIn = function(){}
+SlotMachine.prototype.getTotalSum = function(){
+    return this.cash;
+}
+SlotMachine.prototype.cashOut = function(sum){
+    if(sum > 0 && sum < this.cash) {
+        return this.cash -= sum;
+    } else {
+        throw "SLOT MACHINE: You trying cash out the sum that more then machine contain";
+    }
+}
+SlotMachine.prototype.cashIn = function(sum){
+    if(sum > 0) { this.cash += sum; }
+}
 SlotMachine.prototype.letsPlay = function(){}
 
 try {
-    var casino = new Casino({machinesCount: 3, totalCash: 100});
+    var casino = new Casino({machinesCount: 4, totalCash: 100});
 } catch(e) {
     console.error(e);
 }
 
-console.log(casino.addMachine());
+//console.log('add mashine', casino.addMachine());
+console.log('remove machine');
+casino.casinoMachines[0].cashOut(100);
+console.log(casino);
