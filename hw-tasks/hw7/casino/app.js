@@ -105,7 +105,7 @@ SlotMachine.prototype.cashIn = function(n){
 SlotMachine.prototype.letsPlay = function(n){
     this.cashIn(n);
     let random = Math.floor(Math.random()*(999-100+1)+100);
-    
+    /*  */
 }
 
 try {
