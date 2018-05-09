@@ -29,7 +29,8 @@ Casino.prototype.getTotalSum = function(){
     return this.totalCash;
 }
 Casino.prototype.getMachinesCount = function(){
-    return _self.machinesCount.length;
+    let count = this.machinesCount;
+    return count;
 }
 Casino.prototype.addMachine = function(){ 
     /* Find max cash in machine*/   
@@ -49,30 +50,47 @@ Casino.prototype.addMachine = function(){
 Casino.prototype.removeMachine = function(index){
     let sumToDistibute = this.casinoMachines[index].cash;
     this.casinoMachines.splice(index, 1);
-    this.machinesCount--;
+    this.machinesCount = this.casinoMachines.length;
     let sumToMachine = Math.floor(sumToDistibute / this.machinesCount);
     let reminder = sumToDistibute % this.machinesCount;
     this.casinoMachines.forEach(function(el, index){
         el.cash += sumToMachine;
         if (index === 0) { 
-            el.cash+reminder; 
+            el.cash+=reminder; 
         }
+        console.log(el);
     });
 }
 
-Casino.prototype.cashOut = function(){
-    let cashOut = 0;
-    this.casinoMachines.forEach(function(el, index){
-        cashOut += el.cash;
-        el.cash = 0;        
-    });
-    return cashOut;
+Casino.prototype.cashOut = function(n){
+    let s = 0;
+    if( n > 0 && n < this.totalCash) {        
+        this.casinoMachines.sort(function(a, b){
+            if ( a.cash > b.cash) {
+                return -1;
+            } 
+            if ( a.cash < b.cash ){
+                return 1;
+            }
+            return 0;
+        });
+
+        this.casinoMachines.forEach(function(el){
+            if (n > el.cash ) {
+                n -= el.cash;
+                el.cash = 0;                
+            } else {
+                el.cash -= n;
+                n = 0;
+            }            
+        });
+        this.totalCash -= n;
+    } else {
+        throw "No have enought money";
+    }
+
 }
 
-/**
- * 
- * @param {cash: Number, luckbo: Bool } options 
- */
 function SlotMachine(options){
     this.cash = options.cash;
     this.luckbox = options.luckbox;
@@ -92,17 +110,29 @@ SlotMachine.prototype.cashIn = function(n){
 }
 SlotMachine.prototype.letsPlay = function(n){
     this.cashIn(n);
+    let sum = 0;
     let random = Math.floor(Math.random()*(999-100+1)+100);
-    if(random[0] === random[1] && random[]) {
-        return n * 2;
-    } else if (random === '777'){
-        let wincash = this.cash;
-        this.cash = 0;
-        return wincash;
-    } else {
+    random = 222;
+
+    if(random[0] === random[1] || random[0] === random[2] ) {
+        if(random === 777){
+            sum = this.cash;        
+            this.cash = 0;
+            return "Your numbers is: " + random + " and you win Jackpot $" + sum;    
+        } else {
+            sum = n * 5; 
+            this.cashOut(sum);
+            return "Your numbers is: " + random + " and you win " + sum;    
+        }
+    } 
+    else if(random[0] === random[1] || random[0] === random[2] || random[1] === random[2]) {
+        sum = n * 2; 
+        this.cashOut(sum);
+        return "Your numbers is: " + random + " and you win $" + sum;
+    }     
+    else {
         return "Try again";
-    }
-    /*  */
+    }    
 }
 
 try {
@@ -110,3 +140,7 @@ try {
 } catch(e) {
     console.error(e);
 }
+
+console.log(casino);
+console.log("Total sum: ", casino.getTotalSum());
+console.log("Machines count : ", casino.getMachinesCount());
