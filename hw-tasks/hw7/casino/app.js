@@ -149,18 +149,16 @@ try {
 console.log("Casino init \n 12 machines \n $1000 cash \n", casino);
 
 console.log("Add 1 to machine to Casino", casino );
- casino.addMachine();
+casino.addMachine();
 
 console.log("Remove machine to Casino", casino );
-// casino.removeMachine(3);
+casino.removeMachine(0);
 
 console.log("Play 50 games: \n");
 for(var i = 1; i<=50; i++){
     console.log("Game ", i);
     console.log(casino.casinoMachines[0].letsPlay(20));
 }
-
-// casino.casinoMachines[0].letsPlay(100);
 
 
 
