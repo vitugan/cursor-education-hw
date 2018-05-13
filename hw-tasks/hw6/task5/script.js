@@ -5,6 +5,12 @@ var box11 = document.getElementById('box11');
 var box22 = document.getElementById('box22');
 var box33 = document.getElementById('box33');
 
+var link = document.getElementById('prevent');
+
+link.addEventListener('click', function(e){
+  e.preventDefault();
+})
+
 var onClickPrevent = function (e) {    
   var $el = e.target;
   e.preventDefault();  
